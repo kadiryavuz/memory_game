@@ -1,0 +1,215 @@
+body {
+    position: relative;
+    font-family: 'Permanent Marker', cursive;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: yellow; */
+}
+
+label {
+    margin: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+}
+
+.flex-col-center {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;;
+}
+
+.flex-center {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    height:100%;
+    max-width: 1200px;
+    /* background-color: blue; */
+    
+}
+
+.game-header {
+    position: relative;
+    flex: 1.7;
+    width: 100%;
+    min-height: 210px;
+    /* background-color: red; */
+}
+
+.game-body {
+    flex: 5;
+    width: 100%;
+    /* background-color: white; */
+}
+
+.card-container {
+    /* background-color: black; */
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    overflow-y: scroll;
+}
+
+.card {
+    font-family: "Font Awesome 5 Brands";
+    background-color: #353b48;
+    flex: 1 20%;
+    margin:1%;
+    line-height: 1;
+    font-weight: 900;
+    text-rendering: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e1b12c;
+    font-size: 4.5rem;
+    cursor: pointer;
+}
+
+
+
+
+.card::before {
+    content: '\f514';
+}
+
+.card-box {
+    position: relative;
+    flex: 1 20%;
+    margin:1%;
+    font-family: "Font Awesome 5 Brands";
+    line-height: 1;
+    font-weight: 900;
+    text-rendering: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.5rem;
+    cursor: pointer;
+}
+
+.card-box:hover {
+    filter: opacity(0.8);
+}
+
+.card-box-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+/* start rotating */
+/* .card-box-inner:hover {
+    transform: rotateY(180deg);
+} */
+
+.flipStart {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.card-box-inner-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    color: #e1b12c;
+    background-color: #353b48;
+}
+
+.card-box-inner-front::before {
+    content: '\f514';
+}
+
+/* re-trigger rotating */
+.card-box-inner-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border: 2px yellow solid;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 1rem;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+
+.flipEnd {
+    transform: rotateY(180deg);
+}
+
+.card-box-inner-back::before {
+    content: attr(data-before);
+}
+
+.btn-control {
+    outline: none;
+    outline-style: none;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    min-width: 85px;
+    min-height: 50px;
+}
+
+.btn-control:hover {
+    background-color: lightgreen;
+    filter: opacity(0.2);
+}
+
+.hidden {
+    display: none;
+    z-index: 0;
+}
+
+.starterContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.starterContainer > span {
+    width: 90%;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.starterDesc {
+    width: 90%;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
