@@ -8,48 +8,6 @@ const _statusCode = {
 }
 
 var _chars = "abcdefghijklmnoprstuvxyz0123456789!+%&=?*><";
-const _cardIcons = [
-    {
-        id: 1,
-        uniCode: 'f084',
-        desc: 'key',
-    },
-    {
-        id: 2,
-        uniCode: 'f6e3',
-        desc: 'hammer',
-    },
-    {
-        id: 3,
-        uniCode: 'f015',
-        desc: 'home',
-    },
-    {
-        id: 4,
-        uniCode: 'f44e',
-        desc: 'football',
-    },
-    {
-        id: 5,
-        uniCode: 'f0ad',
-        desc: 'wrench',
-    },
-    {
-        id: 6,
-        uniCode: 'f6be',
-        desc: 'cat',
-    },
-    {
-        id: 7,
-        uniCode: 'f185',
-        desc: 'sun',
-    },
-    {
-        id: 8,
-        uniCode: 'f514',
-        desc: 'wolf',
-    }
-]
 
 var Card = (function () {
     function Card(p_Id, p_Code) {
